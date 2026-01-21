@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7818245aa42c8b54fbd0a0a4c2331486
+guid: ad5a52d4c086aa343b95459e0ab92c26
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4352080757405334295
-    second: NeoGun_0
+      213: 8740491524576469797
+    second: Sun_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
-  spriteBorder: {x: 0, y: 5, z: 0, w: 5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NeoGun_0
+      name: Sun_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 4
+        y: 0
         width: 64
-        height: 24
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e4ca050c9d4a93c0800000000000000
-      internalID: -4352080757405334295
+      spriteID: 52361b48bb67c4970800000000000000
+      internalID: 8740491524576469797
       vertices: []
       indices: 
       edges: []
@@ -126,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      NeoGun_0: -4352080757405334295
+      Sun_0: 8740491524576469797
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

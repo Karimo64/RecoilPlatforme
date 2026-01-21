@@ -66,6 +66,11 @@ public class GunShoot : MonoBehaviour
         Vector2 recoilDir = -shootDir;
         playerRb.linearVelocity = Vector2.zero;
         playerRb.AddForce(recoilDir * recoilForce, ForceMode2D.Impulse);
+
+        if (currentAmmo <= 0)
+        {
+            StartCoroutine(Reload());
+        }
     }
 
     // =======================

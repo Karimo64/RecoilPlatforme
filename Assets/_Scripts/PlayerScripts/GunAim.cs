@@ -5,6 +5,8 @@ public class GunAim : MonoBehaviour
 {
     private Camera mainCamera;
     [SerializeField] private Transform gunSprite;
+    [SerializeField] float stickMaxMagnitude = 1.2f;
+    [SerializeField] float stickDeadZone = 0.01f;
 
     private Vector2 lastStickDir = Vector2.right;
 
@@ -23,10 +25,10 @@ public class GunAim : MonoBehaviour
         // ¿Viene del mouse? → es posición de pantalla
         // ─────────────────────────────────────────────
 
-        if (input.sqrMagnitude <= 1.2f)   // ← probablemente joystick
+        if (input.sqrMagnitude <= stickMaxMagnitude)   // ← probablemente joystick
         {
             // --- APUNTADO CON STICK DERECHO ---
-            if (input.sqrMagnitude > 0.01f)
+            if (input.sqrMagnitude > stickDeadZone)
                 lastStickDir = input;
 
             direction = lastStickDir;
