@@ -1,6 +1,6 @@
 using UnityEngine;
 
-// 🧬 CLASE BASE (HERENCIA)
+//  CLASE BASE (HERENCIA)
 public class PlatformBase : MonoBehaviour
 {
     protected Collider2D col;
