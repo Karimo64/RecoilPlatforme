@@ -12,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 2284126935
+    locked: 0
+  - name: Map
+    uniqueID: 1761041251
     locked: 0
   m_RenderingLayers:
   - Default
