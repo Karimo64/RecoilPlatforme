@@ -18,7 +18,7 @@ public class EnemyShooter : EnemyBase
 
     private void Update()
     {
-        if (isDead) return;
+        if (!CanAct) return;
 
         timer += Time.deltaTime;
         if (timer >= shootCooldown)

@@ -11,7 +11,7 @@ public class PlantShooter : EnemyBase
 
     private void Update()
     {
-        if (isDead) return;
+        if (!CanAct) return;
 
         timer += Time.deltaTime;
 

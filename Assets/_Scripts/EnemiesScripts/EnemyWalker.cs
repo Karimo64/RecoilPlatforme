@@ -11,7 +11,7 @@ public class EnemyWalker : EnemyBase
 
     private void Update()
     {
-        if (isDead) return;
+        if (!CanAct) return;
         transform.Translate(Vector2.right * direction * moveSpeed * Time.deltaTime);
 
         if (!IsGroundAhead())
