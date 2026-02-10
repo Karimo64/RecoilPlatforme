@@ -20,6 +20,9 @@ public class GunShoot : MonoBehaviour
     public int maxAmmo = 3;
     public float reloadTime = 2f;
 
+    [Header("Player State")]
+    [SerializeField] private PlayerDamageHandler damageHandler;
+
     private int currentAmmo;
     private bool isReloading = false;
     private float reloadTimer = 0f;   // <- IMPORTANTE para UI
@@ -39,6 +42,10 @@ public class GunShoot : MonoBehaviour
         // No disparar mientras recarga
         if (isReloading) return;
 
+        // No disparar si el jugador está en daño / invulnerable
+        if (damageHandler != null && damageHandler.IsInvulnerable)
+            return;
+            
         // Fire rate
         if (Time.time < nextFireTime) return;
         nextFireTime = Time.time + fireRate;

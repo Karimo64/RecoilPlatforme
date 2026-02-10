@@ -9,6 +9,13 @@ public class PlayerDamageHandler : MonoBehaviour
     [Header("Visual")]
     [SerializeField] private float blinkInterval = 0.1f;
 
+    [Header("Health")]
+    [SerializeField] private PlayerHealth playerHealth;
+
+    [Header("Damage Values")]
+    [SerializeField] private float bulletDamage = 10f;
+    [SerializeField] private float enemyContactDamage = 20f;
+
     private Rigidbody2D rb;
     private SpriteRenderer spriteRenderer;
 
@@ -51,8 +58,7 @@ public class PlayerDamageHandler : MonoBehaviour
         if (collision.CompareTag("Damage"))
         {
             ApplyKnockback();
-            Debug.Log("Daño detectado, push back");
-
+            playerHealth.TakeDamage(bulletDamage);
             Destroy(collision.gameObject);
         }
 
@@ -60,7 +66,7 @@ public class PlayerDamageHandler : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             ApplyKnockback();
-            Debug.Log("Daño detectado, push back");
+            playerHealth.TakeDamage(enemyContactDamage);
         }
     }
 
