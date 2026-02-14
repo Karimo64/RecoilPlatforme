@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "RecoilPlatformer.slnx"
+    "dotnet.defaultSolution": "RecoilPlatforme.slnx"
 }
