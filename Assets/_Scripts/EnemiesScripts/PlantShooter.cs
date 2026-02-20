@@ -13,6 +13,10 @@ public class PlantShooter : EnemyBase
     {
         if (!CanAct) return;
 
+        // Solo dispara si está visible
+        if (!IsInsideCamera())
+            return;
+
         timer += Time.deltaTime;
 
         if (timer >= cooldown)
@@ -24,18 +28,29 @@ public class PlantShooter : EnemyBase
 
     private void FireProjectiles()
     {
+        if (projectilePrefab == null || firePoint == null)
+            return;
+
         Vector2[] directions =
         {
             Vector2.up,
             new Vector2(0.5f, 1f).normalized,
-            new Vector2(-0.5f, 1f).normalized,
-            new Vector2(0f, 1f)
+            new Vector2(-0.5f, 1f).normalized
         };
 
         foreach (Vector2 dir in directions)
         {
             GameObject bullet = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-            bullet.GetComponent<EnemyProjectile>().SetDirection(dir);
+
+            EnemyProjectile projectile = bullet.GetComponent<EnemyProjectile>();
+            if (projectile != null)
+                projectile.SetDirection(dir);
         }
+    }
+
+    protected override void ResetState()
+    {
+        base.ResetState();
+        timer = 0f;
     }
 }
